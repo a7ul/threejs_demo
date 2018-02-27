@@ -13,4 +13,17 @@ module.exports = {
     compress: true,
     port: 9000,
   },
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpg|gif|dae)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+        ],
+      },
+    ],
+  },
 };
